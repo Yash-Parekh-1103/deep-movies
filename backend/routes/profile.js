@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
+import Signup from "../models/signup.js"; // Import the model
+
 const router = express.Router();
-const Signup = require("../models/signup"); // Import the model
 
 // GET user profile by email
 router.get("/:email", async (req, res) => {
@@ -43,4 +44,4 @@ router.put("/:email", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

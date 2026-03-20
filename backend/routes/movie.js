@@ -1,7 +1,8 @@
-const express = require("express");
+import express from "express";
+import Signup from "../models/signup.js"; // Import Signup model
+import Movie from "../models/movies.js"; // Import Movie model
+
 const router = express.Router();
-const Signup = require("../models/signup"); // Import Signup model
-const Movie = require("../models/movies"); // Import Movie model
 
 // Search movies by title
 // In your backend route file
@@ -25,7 +26,7 @@ router.get('/search', async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     let moviesList = await Movie.find(); // Fetch all movies from the database
-    res.status(201).json({ message: "Movie added successfully", moviesList });
+    res.status(201).json({ message: " all Movie ", moviesList });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
@@ -133,5 +134,4 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-
-module.exports = router;
+export default router;

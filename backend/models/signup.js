@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // Define the user signup schema
 const signupSchema = new mongoose.Schema({
@@ -9,4 +9,4 @@ const signupSchema = new mongoose.Schema({
 });
 
 // Export the Signup model
-module.exports = mongoose.model("Signup", signupSchema);
+export default mongoose.model("Signup", signupSchema);

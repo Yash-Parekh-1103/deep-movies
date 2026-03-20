@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
+import Signup from "../models/signup.js"; // Import the Signup model
+
 const router = express.Router();
-const Signup = require("../models/signup"); // Import the Signup model
 
 // Signup POST route (User Registration)
 router.post("/", async (req, res) => {
@@ -30,4 +31,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

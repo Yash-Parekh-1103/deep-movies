@@ -1,12 +1,14 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const notificationRoutes = require('./routes/notifications');
-const signupRoutes = require("./routes/signup");
-const loginRoutes = require("./routes/login");
-const profileRoutes = require("./routes/profile");
-const movieRoutes = require("./routes/movie");
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+import mongoose from "mongoose";
+import notificationRoutes from './routes/notifications.js';
+import signupRoutes from "./routes/signup.js";
+import loginRoutes from "./routes/login.js";
+import profileRoutes from "./routes/profile.js";
+import movieRoutes from "./routes/movie.js";
+
+dotenv.config();
 
 const app = express();
 app.use(cors({
