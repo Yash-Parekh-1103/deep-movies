@@ -7,11 +7,11 @@ export const searchMovie = async ({query}) => {
     const movie = await axios.get(`http://localhost:3000/movie/search?q=${query}`)
 
     // console.log(movie.data.movies);
-    return JSON.stringify(movie.data.movies)
+    return JSON.stringify(movie.data)
 
 }
 
-await searchMovie({"query":"shadow"})
+// await searchMovie({"query":"shadow"})
 // const allmovie2 = await allMovie();
 
 // console.log(allmovie2
@@ -30,6 +30,7 @@ await searchMovie({"query":"shadow"})
             query:z.string().describe("query for movie")
         })
     }
-
  )
+
+
 

@@ -2,7 +2,6 @@
 import { ChatOllama } from "@langchain/ollama"
 import { configDotenv } from "dotenv";
 // 🌱 Load environment variables
-import { config } from "dotenv"
 configDotenv();
 
 // 🤖 Initialize LLM with Ollama API
@@ -14,5 +13,5 @@ export const llm = new ChatOllama({
     Authorization: "Bearer " + process.env.OLLAMA_API_KEY,
   },
     // 🧠 Custom model
-  model: "kimi-k2-thinking",
+  model: "deepseek-v3.1:671b",
 })

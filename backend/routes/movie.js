@@ -39,7 +39,7 @@ router.get("/:id", async (req, res) => {
     const { id } = req.params;
     let moviesList = await Movie.findById(id); // Fetch movie details by ID
     console.log(moviesList);
-    res.status(201).json({ message: "Movie added successfully", moviesList });
+    res.status(201).json({ message: "Movie fetched successfully", moviesList });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
